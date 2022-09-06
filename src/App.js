@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-
+import React from 'react';
+import MainPage from './MainPage';
+import Fizz from './Fizz';
+import Bazz from './Bazz';
+import Buzz from './Buzz';
+import {Routes, Route} from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path='/' element={<MainPage />}></Route>
+      <Route path='/Fizz.js' element={<Fizz />}></Route>
+      <Route path='/Buzz.js' element={<Buzz />}></Route>
+      <Route path='/Bazz.js' element={<Bazz />}></Route>
+    </Routes>
   );
 }
 
